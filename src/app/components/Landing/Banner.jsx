@@ -14,7 +14,7 @@ export default function Banner() {
   }, []);
 
   return (
-    <section className="relative mt-20 overflow-hidden">
+    <section className="relative  overflow-hidden">
       {/* Background Image with Overlay */}
       <div 
         className="relative h-[70vh] lg:min-h-[900px] min-h-[500px] w-full"
@@ -25,7 +25,7 @@ export default function Banner() {
           src="https://images.pexels.com/photos/2244746/pexels-photo-2244746.jpeg" 
           alt="Premium car customization services"
         />
-        <div className="absolute inset-0  bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-black/40  bg-opacity-50"></div>
         
         {/* Content */}
         <div className="relative h-full flex items-center container mx-auto px-4 sm:px-6 lg:px-8">

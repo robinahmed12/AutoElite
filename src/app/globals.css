@@ -1,35 +1,134 @@
+
 @import "tailwindcss";
 
-/* Global Body Effect */
-body {
-  @apply relative overflow-x-hidden;
-  background-color: #f2f2f2; /* Garage White */
-  color: #101010; /* Carbon Black text */
-}
 
-/* Glowing Tech Overlay */
-body::before {
-  content: '';
-  position: fixed;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at center, #00ffff33, transparent 70%),
-              conic-gradient(from 0deg, #00f0ff, #ff1744, #00f0ff, #ff1744);
-  background-size: 300% 300%;
-  z-index: -1;
-  animation: neonRotate 30s linear infinite;
-  filter: blur(80px);
-  opacity: 0.25;
-}
 
-/* Animate background rotation */
-@keyframes neonRotate {
-  0% {
-    transform: rotate(0deg) scale(1);
-  }
-  100% {
-    transform: rotate(360deg) scale(1);
-  }
-}
+/* Enhanced Global Body Effect */
+        body {
+            position: relative;
+            overflow-x: hidden;
+            background-color: #0a0a0f; /* Deep space blue-black */
+            color: #e2e8f0; /* Light gray text for contrast */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Animated grid overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(to right, #0a0a0f55 1px, transparent 1px),
+                linear-gradient(to bottom, #0a0a0f55 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: -2;
+            pointer-events: none;
+            animation: gridMove 20s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% {
+                background-position: 0 0;
+            }
+            100% {
+                background-position: 40px 40px;
+            }
+        }
+
+        /* Dynamic gradient overlay */
+        body::after {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(circle at 70% 30%, rgba(0, 240, 255, 0.15) 0%, transparent 25%),
+                radial-gradient(circle at 30% 70%, rgba(255, 23, 68, 0.15) 0%, transparent 25%),
+                radial-gradient(circle at 50% 50%, rgba(0, 240, 255, 0.1) 0%, transparent 40%),
+                conic-gradient(from 45deg, 
+                    rgba(0, 240, 255, 0.1), 
+                    rgba(255, 23, 68, 0.1), 
+                    rgba(0, 240, 255, 0.1), 
+                    rgba(255, 23, 68, 0.1));
+            background-size: 800px 800px, 800px 800px, 1200px 1200px, 100% 100%;
+            z-index: -1;
+            animation: gradientShift 25s ease infinite;
+            filter: blur(40px);
+            opacity: 0.5;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% {
+                background-position: 0% 0%, 0% 0%, 0% 0%, 0 0;
+                transform: rotate(0deg) scale(1);
+            }
+            33% {
+                background-position: 30% 10%, 70% 80%, 40% 40%, 0 0;
+                transform: rotate(3deg) scale(1.02);
+            }
+            66% {
+                background-position: 70% 90%, 20% 10%, 80% 60%, 0 0;
+                transform: rotate(-2deg) scale(1.01);
+            }
+        }
+
+        /* Floating particles effect */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -3;
+            overflow: hidden;
+            pointer-events: none;
+        }
+
+        .particle {
+            position: absolute;
+            background-color: rgba(0, 240, 255, 0.5);
+            border-radius: 50%;
+            animation: float 15s infinite ease-in-out;
+        }
+
+        .particle:nth-child(odd) {
+            background-color: rgba(255, 23, 68, 0.4);
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+                opacity: 0.7;
+            }
+            33% {
+                transform: translate(30px, -40px) scale(1.2);
+                opacity: 0.4;
+            }
+            66% {
+                transform: translate(-20px, 30px) scale(0.8);
+                opacity: 0.6;
+            }
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #1a202c;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, #00f0ff, #ff1744);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, #00c6d4, #d4113a);
+        }

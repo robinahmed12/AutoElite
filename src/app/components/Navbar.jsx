@@ -41,7 +41,7 @@ export default function Navbar() {
           : ""
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 py-3 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link
@@ -51,7 +51,7 @@ export default function Navbar() {
             onClick={() => setActiveLink("home")}
           >
             <span className="text-3xl font-bold">
-              <span className="text-gray-900">Auto</span>
+              <span className="text-red-900">Auto</span>
               <span className="text-blue-600">Elite</span>
             </span>
             <span className="ml-2 text-xs bg-cyan-400 text-gray-900 px-2 py-1 rounded-full font-bold">
@@ -75,7 +75,7 @@ export default function Navbar() {
                     ${
                       activeLink === item.name.toLowerCase()
                         ? "border-blue-600 text-blue-600"
-                        : "border-transparent group-hover:border-blue-600 text-gray-900 group-hover:text-blue-600"
+                        : "border-transparent group-hover:border-blue-600 text-white font-bold group-hover:text-blue-600"
                     }`}
                     onClick={() => setActiveLink(item.name.toLowerCase())}
                   >
@@ -89,7 +89,7 @@ export default function Navbar() {
           {/* CTA Buttons */}
           <div className=" hidden lg:flex items-center space-x-4">
             <button
-              className="px-6 py-2 rounded-full border border-gray-900 text-gray-900 
+              className="px-6 py-2 rounded-full border bg-white border-gray-900 text-gray-900 
               hover:bg-gray-900 hover:text-white transition-all duration-300"
               data-aos="fade-down"
               data-aos-delay="350"
