@@ -88,14 +88,15 @@ export default function Navbar() {
 
           {/* CTA Buttons */}
           <div className=" hidden lg:flex items-center space-x-4">
-            <button
+            <Link
+            href={"/login"}
               className="px-6 py-2 rounded-full border bg-white border-gray-900 text-gray-900 
               hover:bg-gray-900 hover:text-white transition-all duration-300"
               data-aos="fade-down"
               data-aos-delay="350"
             >
               Sign in
-            </button>
+            </Link>
             <button
               className="px-6 py-2 rounded-full bg-red-500 text-white 
               hover:bg-red-600 transition-all duration-300 shadow-md
