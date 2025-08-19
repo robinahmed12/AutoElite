@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+/* Global Body Effect */
+body {
+  @apply relative overflow-x-hidden;
+  background-color: #f2f2f2; /* Garage White */
+  color: #101010; /* Carbon Black text */
+}
+
+/* Glowing Tech Overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, #00ffff33, transparent 70%),
+              conic-gradient(from 0deg, #00f0ff, #ff1744, #00f0ff, #ff1744);
+  background-size: 300% 300%;
+  z-index: -1;
+  animation: neonRotate 30s linear infinite;
+  filter: blur(80px);
+  opacity: 0.25;
+}
+
+/* Animate background rotation */
+@keyframes neonRotate {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
