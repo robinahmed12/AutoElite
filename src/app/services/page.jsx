@@ -53,13 +53,13 @@ export default function Services() {
   ];
 
   return (
-    <section className="py-16  bg-gray-50">
+    <section className="py-16 ">
       <div className="container mt-20  mx-auto px-4">
         <div className="text-center mb-16" data-aos="fade-up">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-white mb-4">
             <span className="text-blue-600">Premium</span> Automotive Services
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg text-white/60 max-w-2xl mx-auto">
             Elevate your driving experience with our cutting-edge garage
             solutions, blending technology with craftsmanship.
           </p>
@@ -71,7 +71,7 @@ export default function Services() {
               key={index}
               data-aos="fade-up"
               data-aos-delay={index * 100}
-              className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group"
+              className="bg-white/70 rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group"
             >
               <div className="p-6">
                 <div className="text-4xl mb-4 text-cyan-400 group-hover:text-blue-600 transition-colors duration-300">

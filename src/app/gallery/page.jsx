@@ -107,7 +107,7 @@ const Gallery = () => {
   ];
 
   return (
-    <div className="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+    <div className=" min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <Head>
         <title>Premium Auto Upgrades | Elite Garage</title>
         <meta name="description" content="Explore our premium car upgrades and modifications" />
@@ -150,7 +150,7 @@ const Gallery = () => {
               key={item.id}
               data-aos="fade-up"
               data-aos-delay={(index % 3) * 100}
-              className="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 bg-white"
+              className="group relative overflow-hidden rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 bg-red-400/20"
             >
               <div className="relative h-72 overflow-hidden">
                 <img 
