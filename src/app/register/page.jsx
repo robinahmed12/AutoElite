@@ -25,7 +25,7 @@ const Form = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 py-12 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-md">
-        <div className="relative bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-500 ease-in-out transform hover:shadow-2xl">
+        <div className="relative  rounded-2xl shadow-xl overflow-hidden transition-all duration-500 ease-in-out transform hover:shadow-2xl">
           <div className="absolute inset-0 bg-gradient-to-r from-gray-900 to-carbon-black opacity-95"></div>
           
           <input 
